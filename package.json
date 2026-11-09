@@ -1,0 +1,58 @@
+{
+  "name": "ai-sdk-tool-cyberwarex",
+  "version": "0.1.0",
+  "description": "Token safety check and live web search as Vercel AI SDK tools, paid per call in USDC on Base via x402. No API key, with per-call and daily spend limits.",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    }
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "keywords": [
+    "ai-sdk",
+    "vercel-ai",
+    "tools",
+    "x402",
+    "web-search",
+    "token-safety",
+    "honeypot",
+    "base",
+    "usdc",
+    "agents"
+  ],
+  "author": "CyberWareX",
+  "license": "MIT",
+  "homepage": "https://cyberwarex.com/docs/ai-sdk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyberwareX/ai-sdk-tool-cyberwarex.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "ai": ">=6",
+    "zod": ">=3.25"
+  },
+  "dependencies": {
+    "@x402/evm": "^2.30.0",
+    "@x402/fetch": "^2.30.0"
+  },
+  "devDependencies": {
+    "@ai-sdk/openai-compatible": "^3.0.87",
+    "ai": "^7.0.166",
+    "viem": "^2.57.17",
+    "zod": "^4.6.7"
+  }
+}
