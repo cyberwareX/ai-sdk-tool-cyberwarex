@@ -46,7 +46,7 @@ You can also build one tool at a time: `tokenSafetyCheck({ payFetch })` and `web
 ## When something fails
 
 - Empty wallet, limit reached, service down or timeout: `tokenSafetyCheck` returns `ok: false` and verdict `NO_ANSWER`. Treat that as unsafe and do not trade. `webSearch` returns `ok: false` with an `error`.
-- The limits are checked before anything is signed. A payment that fails after approval still counts, so the limit errs on the safe side. The count is kept in memory per process; restarting the process resets it.
+- The limits are checked before anything is signed. A payment that fails after approval still counts, so the limit errs on the safe side. The count is kept in memory for each cyberwarexTools() call: create it once and reuse it. A restart resets the count.
 - LIMIT means a real risk was found: trade small or skip. RECHECK means the data was not complete. Large tokens such as USDC can carry blacklist or pause codes and still get ALLOW, because the issuer can freeze them by design.
 - The check is automated on-chain heuristics, not financial advice.
 
