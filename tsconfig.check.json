@@ -1,0 +1,1 @@
+{ "compilerOptions": { "strict": true, "noEmit": true, "module": "nodenext", "moduleResolution": "nodenext", "target": "es2022", "types": ["node"], "skipLibCheck": true }, "files": ["examples/registry-example.ts"] }
